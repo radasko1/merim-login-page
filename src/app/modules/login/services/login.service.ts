@@ -10,7 +10,7 @@ export class LoginService {
   constructor(private readonly httpClient: HttpClient) {}
 
   /**
-   * Login
+   * Login request
    * @param userCredentials
    */
   public login(userCredentials: UserCredentials) {
@@ -19,7 +19,6 @@ export class LoginService {
     formData.append('username', userCredentials.username);
     formData.append('password', userCredentials.password);
 
-    // may be good some token or captcha
     return this.httpClient.post(this.url, formData);
   }
 }
