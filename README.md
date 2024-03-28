@@ -2,9 +2,9 @@
 
 ## Information
 
-Login page is located on URL `http://localhost:4200/login`.
+Login page is located on path `/login`, which is URL `http://localhost:4200/login`.
 
-
+## Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
 
