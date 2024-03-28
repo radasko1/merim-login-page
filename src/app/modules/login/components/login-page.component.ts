@@ -46,10 +46,11 @@ import { LOGIN_FORM_COMPONENT_TEXT } from '../constants/login-form-component-tex
               <input
                 type="email"
                 class="px-2 mt-1 block w-full rounded border-0 py-1.5 ring-1 ring-inset focus:ring-1"
-                [ngClass]="{
-                  'ring-red-600 ring-2': showError(form.controls.username),
-                  'ring-gray-300': !showError(form.controls.username)
-                }"
+                [ngClass]="
+                  showError(form.controls.username)
+                    ? 'ring-red-600 ring-2'
+                    : 'ring-gray-300'
+                "
                 id="email"
                 formControlName="username"
                 [placeholder]="COMPONENT_TEXT.EMAIL_PLACEHOLDER"
@@ -69,10 +70,11 @@ import { LOGIN_FORM_COMPONENT_TEXT } from '../constants/login-form-component-tex
               <input
                 type="password"
                 class="px-2 mt-1 block w-full rounded border-0 py-1.5 ring-1 ring-inset focus:ring-1"
-                [ngClass]="{
-                  'ring-red-600 ring-2': showError(form.controls.password),
-                  'ring-gray-300': !showError(form.controls.password)
-                }"
+                [ngClass]="
+                  showError(form.controls.username)
+                    ? 'ring-red-600 ring-2'
+                    : 'ring-gray-300'
+                "
                 id="password"
                 formControlName="password"
                 [placeholder]="COMPONENT_TEXT.PASSWORD_PLACEHOLDER"
