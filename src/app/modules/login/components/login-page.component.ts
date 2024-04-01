@@ -200,7 +200,7 @@ export class LoginPageComponent {
     }
     // there can be other conditions...
 
-    this.cdr.detectChanges();
+    this.cdr.markForCheck();
   }
 
   /**
@@ -236,6 +236,6 @@ export class LoginPageComponent {
    */
   protected toggleProcess(state: boolean) {
     this.isProcessing = state;
-    this.cdr.detectChanges();
+    this.cdr.markForCheck();
   }
 }
